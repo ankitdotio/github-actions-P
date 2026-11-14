@@ -6,21 +6,25 @@ on:
 jobs:
 
   code:
+  
     runs-on: ubuntu-latest
     steps:
       - name: coding
         run: echo "CODING"
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
         - name: building
           run: echo "BUILDING"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
         - name: testing
           run: echo "TESTING"
   deploy:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
         - name: deploying
