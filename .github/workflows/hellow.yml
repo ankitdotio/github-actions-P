@@ -1,0 +1,18 @@
+#WORKFLOW
+#Should have a name
+name : hello
+
+on:
+  workflow_dispatch:
+
+#JOBS
+jobs:
+  helloJob:
+    #creates an ephermal container
+    runs-on: ubuntu-latest
+    steps:
+      - name : sayhello 
+      run: echo  "hello from the very first job"
+      
+#STEPS
+#ACTIONS
