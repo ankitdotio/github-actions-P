@@ -12,5 +12,13 @@ jobs:
       - name: clone the code 
         uses: actions/checkout@v7
 
+      - name : installing python
+        uses: actions/setup-python@v5
+        with:
+          python-version : "3.14"
+
       - name: installing the linter
         run: pip install ruff
+        
+      - name: check the file for linting
+        run : ruff  check .
