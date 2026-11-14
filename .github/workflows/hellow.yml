@@ -10,9 +10,10 @@ jobs:
   helloJob:
     #creates an ephermal container
     runs-on: ubuntu-latest
+    #STEPS
     steps:
       - name : sayhello 
-      run: echo  "hello from the very first job"
+        run: echo  "hello from the very first job"
       
-#STEPS
+
 #ACTIONS
