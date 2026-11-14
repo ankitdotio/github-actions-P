@@ -1,0 +1,16 @@
+# GOAl : whenever someone changes a python code , the linter wil run
+name: pythonLinter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone the code 
+        uses: actions/checkout@v7
+
+      - name: installing the linter
+        run: pip install ruff
